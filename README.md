@@ -1,4 +1,4 @@
-# 🌳 filetree-leafbloomer 🌸
+# 📂🌳 filetree-leafbloomer 🍃🌸
 
 Crawl your filetree and apply a custom processing pipeline to its artifacts in the leaves, things like-- audio extraction, transcription, summarization, and html generation.
 
@@ -6,7 +6,7 @@ Crawl your filetree and apply a custom processing pipeline to its artifacts in t
 
 ## Quick Explanation
 
-🌳 filetree-leafbloomer 🌸 is a tool that processes video files to extract audio, compress it, generate transcripts, create summaries, and generate word clouds. It also creates HTML summaries for easy viewing. Perfect for turning your videos into digestible content!
+📂🌳 filetree-leafbloomer 🍃🌸 is a tool that processes video files to extract audio, compress it, generate transcripts, create summaries, and generate word clouds. It also creates HTML summaries for easy viewing. Perfect for turning your videos into digestible content!
 
 ## Install Instructions
 
