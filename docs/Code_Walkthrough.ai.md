@@ -1,6 +1,6 @@
 # 🌳 filetree-leafbloomer 🌸 Code Execution Walkthrough
 
-graph TD
+```graph TD
     A[Video File (.mp4)] -->|Extract Audio| B[Audio File (.audio.mp3)]
     B -->|Compress Audio| C[Compressed Audio File (.compressed_audio.mp3)]
     C -->|Extract Transcript| D[Transcript Files (.transcript.json & .transcript.txt)]
@@ -15,7 +15,7 @@ graph TD
     style E fill:#f99,stroke:#333,stroke-width:4px
     style F fill:#99f,stroke:#333,stroke-width:4px
     style G fill:#fa9,stroke:#333,stroke-width:4px
-
+```
 
 ## Running the Main File
 
