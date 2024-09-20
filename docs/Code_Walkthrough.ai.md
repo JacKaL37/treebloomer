@@ -1,21 +1,7 @@
 # 🌳 filetree-leafbloomer 🌸 Code Execution Walkthrough
 
-```graph TD
-    A[Video File (.mp4)] -->|Extract Audio| B[Audio File (.audio.mp3)]
-    B -->|Compress Audio| C[Compressed Audio File (.compressed_audio.mp3)]
-    C -->|Extract Transcript| D[Transcript Files (.transcript.json & .transcript.txt)]
-    D -->|Summarize Transcript| E[Summary File (.summaries.json)]
-    D -->|Generate Word Cloud| F[Word Cloud (.wordcloud.png)]
-    E -->|Generate HTML Summary| G[HTML Summary (.html)]
+![image](https://github.com/user-attachments/assets/c174992c-baf5-45fc-a1aa-961dddcd8547)
 
-    style A fill:#f9f,stroke:#333,stroke-width:4px
-    style B fill:#ff9,stroke:#333,stroke-width:4px
-    style C fill:#9ff,stroke:#333,stroke-width:4px
-    style D fill:#9f9,stroke:#333,stroke-width:4px
-    style E fill:#f99,stroke:#333,stroke-width:4px
-    style F fill:#99f,stroke:#333,stroke-width:4px
-    style G fill:#fa9,stroke:#333,stroke-width:4px
-```
 
 ## Running the Main File
 
