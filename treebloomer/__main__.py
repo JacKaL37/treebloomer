@@ -10,7 +10,12 @@ from processes.summarization import summarize_transcript
 from processes.html_page_generation import generate_html_summary
 from processes.word_cloud_generation import generate_word_cloud
 
+import logging
 
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s - %(filename)s - %(funcName)s - %(lineno)d - %(message)s'
+)
 
 logger = logging.getLogger(__name__)
 
@@ -46,7 +51,7 @@ def main(directory: str, exclude: List[str]):
 
 if __name__ == "__main__":
 
-    default_directory_path = r"C:\Users\jonma\Downloads\paul-start-here-vid-test"
+    default_directory_path = r"C:\Users\jonma\Downloads\tiktok-paul-start-here-0"
     default_exclude_paths = []
     parser = argparse.ArgumentParser(description="Process video files to extract audio and transcripts.")
     parser.add_argument("directory", nargs="?", default=default_directory_path, help="Directory containing video files to process")
@@ -54,3 +59,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     main(args.directory, args.exclude)
+    print("Done!")
