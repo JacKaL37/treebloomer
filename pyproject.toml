@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "treebloomer"
+version = "0.1.0"
+description = ""
+authors = []
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">3.10, <3.12"
+openai = "^1.47.0"
+openai-whisper = "^20231117"
+audio_extract ="^0.6.0"
+pydub="^0.25.1"
+python-dotenv="^1.0.1"
+matplotlib="^3.9.2"
+nltk="^3.9.1"
+wordcloud="^1.9.3"
+
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+treebloomer = "treebloomer.__main__:main"
