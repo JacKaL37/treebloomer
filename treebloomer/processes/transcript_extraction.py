@@ -9,6 +9,17 @@ from openai import OpenAI
 load_dotenv()
 logger = logging.getLogger(__name__)
 
+def to_dict(obj):
+    if hasattr(obj, "__dict__"):
+        # convert object with a __dict__ to a dictionary
+        result = {key: to_dict(value) for key, value in obj.__dict__.items()}
+    elif isinstance(obj, list):
+        # apply to_dict to each item in list
+        result = [to_dict(item) for item in obj]
+    else:
+        # if it's not a custom object or list, just return it as is
+        result = obj
+    return result
 
 def extract_transcript(audio_file: Path, subfolder: Path) -> Path:
     logger.info(f"Transcribing audio from {audio_file.stem}...")
@@ -26,8 +37,7 @@ def extract_transcript(audio_file: Path, subfolder: Path) -> Path:
         with open(str(audio_file), 'rb') as audio_data:
             result = client.audio.transcriptions.create(model="whisper-1", file=audio_data,
                                                         response_format="verbose_json")
-
-        transcript = dict(result)
+        transcript = to_dict(result)
 
         with open(transcript_json_path, 'w') as json_file:
             json.dump(transcript, json_file, indent=4)
